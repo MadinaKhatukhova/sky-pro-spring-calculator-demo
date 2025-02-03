@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/calculator")
+//localhost:8080/calculator/plus
 public class CalculatorController {
 
     private final CalculatorService calculatorService;
