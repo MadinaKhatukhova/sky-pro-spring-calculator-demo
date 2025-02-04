@@ -10,6 +10,6 @@ public class SkyProSpringCalculatorDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SkyProSpringCalculatorDemoApplication.class, args);
 	}
-
 }
+
 
