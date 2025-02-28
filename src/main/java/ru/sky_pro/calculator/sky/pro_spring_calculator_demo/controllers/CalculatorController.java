@@ -1,8 +1,9 @@
-package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
+package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.controllers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.CalculatorService;
 
 @RestController
 @RequestMapping("/calculator")

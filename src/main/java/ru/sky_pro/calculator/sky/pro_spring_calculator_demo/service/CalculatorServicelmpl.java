@@ -1,9 +1,9 @@
-package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
+package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class CalculatorServicelmpl implements CalculatorService{
+public class CalculatorServicelmpl implements CalculatorService {
 
     public Integer sum(Integer num1, Integer num2) { return num1 + num2; }
 

@@ -1,4 +1,4 @@
-package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
+package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service;
 
 public interface CalculatorService {
 
