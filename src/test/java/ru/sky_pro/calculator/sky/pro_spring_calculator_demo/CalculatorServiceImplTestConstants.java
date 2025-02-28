@@ -1,6 +1,4 @@
 package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
-
-
 public class CalculatorServiceImplTestConstants {
 
     public static final Integer ZERO = 0;

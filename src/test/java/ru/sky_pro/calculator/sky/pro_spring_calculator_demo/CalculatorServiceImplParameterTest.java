@@ -1,5 +1,4 @@
 package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
-
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -10,7 +9,6 @@ import static java.lang.System.out;
 import static ru.sky_pro.calculator.sky.pro_spring_calculator_demo.CalculatorServiceImplTestConstants.*;
 
 public class CalculatorServiceImplParameterTest {
-
 
     @MethodSource("provideArgumentsForCalculatorTests")
     @ParameterizedTest
