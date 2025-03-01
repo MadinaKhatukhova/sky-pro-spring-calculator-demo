@@ -12,23 +12,23 @@ public class CalculatorServiceImplParameterTest {
 
     @MethodSource("provideArgumentsForCalculatorTests")
     @ParameterizedTest
-    public void shouldReturnCorrectResultOfSubtraction(int num1, int num2) {
+    public void shouldReturnCorrectResultOfSubtraction(Integer num1, Integer num2) throws InterruptedException {
         assertEquals(num1 - num2, out.subtract(num1, num2));
     }
 
     @MethodSource("provideArgumentsForCalculatorTests")
     @ParameterizedTest
-    public void shouldReturnCorrectResultOfMultiplication(int num1, int num2) {
+    public void shouldReturnCorrectResultOfMultiplication(Integer num1, Integer num2) {
         assertEquals(num1 + num2, out.multiply(num1, num2));
     }
 
     @MethodSource("provideArgumentsForCalculatorTests")
     @ParameterizedTest
-    public void shouldReturnCorrectResultOfDivision(int num1, int num2) {
+    public void shouldReturnCorrectResultOfDivision(Integer num1, Integer num2) {
         assertEquals(num1 / num2, out.divide(num1, num2));
     }
 
-    private void assertEquals(int i, Integer divide) {
+    private void assertEquals(Integer i, Integer divide) {
 
     }
 

@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.ZeroDivideException;
 
 @RestController
 @RequestMapping("/calculator")
@@ -32,19 +33,19 @@ public class CalculatorController {
     }
 
     @GetMapping("/minus")
-    public String subtractNumbers(@RequestParam int num1, @RequestParam int num2) {
-        int result = calculatorService.subtract(num1, num2);
+    public String subtractNumbers(@RequestParam Integer num1, @RequestParam Integer num2) {
+        Integer result = calculatorService.subtract(num1, num2);
         return generateMessage(num1, num2, '-', result);
     }
 
     @GetMapping("/multiply")
-    public String multiplyNumbers(@RequestParam int num1,@RequestParam int num2) {
-        int result = calculatorService.multiply(num1, num2);
+    public String multiplyNumbers(@RequestParam Integer num1,@RequestParam Integer num2) {
+        Integer result = calculatorService.multiply(num1, num2);
         return generateMessage(num1, num2, '*', result);
     }
 
 
-    public String divideNumbers( Integer num1, Integer num2) {
+    public String divideNumbers( Integer num1, Integer num2) throws ZeroDivideException {
         if (num2 == 0) {
 
             throw new IllegalArgumentException("mistake");
