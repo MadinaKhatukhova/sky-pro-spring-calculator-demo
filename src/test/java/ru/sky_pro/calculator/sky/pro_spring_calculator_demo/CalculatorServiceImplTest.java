@@ -1,15 +1,16 @@
 package ru.sky_pro.calculator.sky.pro_spring_calculator_demo;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.controllers.CalculatorService;
-import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.ZeroDivideException;
+import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.CalculatorServiceImpl;
 
-import static java.lang.System.out;
-import static org.skyscreamer.jsonassert.JSONAssert.assertEquals;
 import static ru.sky_pro.calculator.sky.pro_spring_calculator_demo.CalculatorServiceImplTestConstants.*;
+
 
 class CalculatorServiceImplTest {
 
+    @Autowired
     private final CalculatorService out = new CalculatorServiceImpl() {
 
     };

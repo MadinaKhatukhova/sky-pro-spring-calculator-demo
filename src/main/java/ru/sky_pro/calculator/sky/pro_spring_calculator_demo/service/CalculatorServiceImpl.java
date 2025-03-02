@@ -4,7 +4,8 @@ import org.springframework.stereotype.Service;
 import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.controllers.CalculatorService;
 
 @Service
-public class CalculatorServicelmpl implements CalculatorService {
+
+public class CalculatorServiceImpl implements CalculatorService {
 
     public Integer sum(Integer num1, Integer num2) { return num1 + num2; }
 

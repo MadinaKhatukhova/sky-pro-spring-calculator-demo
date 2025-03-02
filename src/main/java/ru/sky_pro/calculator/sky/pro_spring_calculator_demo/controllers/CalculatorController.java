@@ -10,7 +10,7 @@ import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.ZeroDivideEx
 @RequestMapping("/calculator")
 
 public class CalculatorController {
-
+@Autowired
     private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService) {
