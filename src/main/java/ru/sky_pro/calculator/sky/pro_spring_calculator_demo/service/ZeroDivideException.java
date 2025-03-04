@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 public class ZeroDivideException extends RuntimeException {
 
-    public ZeroDivideException(){
+    public ZeroDivideException() {
         super("Ошибка деление на ноль");
     }
 }

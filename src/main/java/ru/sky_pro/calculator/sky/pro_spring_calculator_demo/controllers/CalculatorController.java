@@ -1,16 +1,18 @@
 package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.controllers;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.CalculatorService;
 import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.ZeroDivideException;
 
 @RestController
 @RequestMapping("/calculator")
 
 public class CalculatorController {
-@Autowired
+    @Autowired
     private final CalculatorService calculatorService;
 
     public CalculatorController(CalculatorService calculatorService) {
@@ -25,7 +27,7 @@ public class CalculatorController {
 
     @GetMapping("/plus")
     public String sumNumbers(@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2) {
-        if (num1==null) {
+        if (num1 == null) {
             return "Mistake";
         }
         Integer result = calculatorService.sum(num1, num2);
@@ -39,13 +41,13 @@ public class CalculatorController {
     }
 
     @GetMapping("/multiply")
-    public String multiplyNumbers(@RequestParam Integer num1,@RequestParam Integer num2) {
+    public String multiplyNumbers(@RequestParam Integer num1, @RequestParam Integer num2) {
         Integer result = calculatorService.multiply(num1, num2);
         return generateMessage(num1, num2, '*', result);
     }
 
 
-    public String divideNumbers( Integer num1, Integer num2) throws ZeroDivideException {
+    public String divideNumbers(Integer num1, Integer num2) throws ZeroDivideException {
         if (num2 == 0) {
 
             throw new IllegalArgumentException("mistake");

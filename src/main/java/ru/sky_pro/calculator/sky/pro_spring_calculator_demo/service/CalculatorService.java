@@ -1,5 +1,4 @@
-package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.controllers;
-import ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service.ZeroDivideException;
+package ru.sky_pro.calculator.sky.pro_spring_calculator_demo.service;
 
 
 public interface CalculatorService {
@@ -10,4 +9,6 @@ public interface CalculatorService {
     Integer multiply(Integer num1, Integer num2);
 
     Integer divide(Integer num1, Integer num2) throws ZeroDivideException;
+
+
 }
